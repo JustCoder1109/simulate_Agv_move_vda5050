@@ -1,0 +1,18 @@
+建立容器 ros2_humble_full
+# 1. 先开权限（必须）
+xhost +local:docker
+
+# 2. 再创建&运行容器
+docker run -it \
+    --name ros2_humble_full \
+    --network=host \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v $HOME/hzt_practise/ATK_items/docker_ros2/ros2_ws:/root/ros2_ws \ #用作ROS2的工作空间
+    docker.m.daocloud.io/osrf/ros:humble-desktop-full
+
+# 3. colcon build 工作空间，ros2_ws
+# 4. colcon build pkg 功能包
+# 5. 编写helloworld.py, 编写一个node节点
+
+#数据卷路径更换。删掉了原来的容器，重新创建一个新的容器，挂载新数据卷
