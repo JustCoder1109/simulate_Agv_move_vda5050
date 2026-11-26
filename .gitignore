@@ -1,0 +1,15 @@
+# ROS 2 / colcon 构建产物
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 编辑器与系统
+.vscode/
+.idea/
+*.swp
+.DS_Store
