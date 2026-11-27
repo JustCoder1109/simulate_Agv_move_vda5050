@@ -45,6 +45,8 @@ docker exec ros2_agv_vda5050 bash -lc 'source /opt/ros/humble/setup.bash && cd /
 docker exec ros2_agv_vda5050 bash -lc 'source /opt/ros/humble/setup.bash && cd /root/ros2_ws && colcon build --packages-select <pkg>'
 # 运行节点
 docker exec ros2_agv_vda5050 bash -lc 'source /opt/ros/humble/setup.bash && source /root/ros2_ws/install/setup.bash && ros2 run <pkg> <node>'
+
+echo "source /root/ros2_ws/install/setup.bash" >> ~/.bashrc
 ```
 
 容器重建方式见仓库 `README`（需先 `xhost +local:docker`）。
